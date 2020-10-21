@@ -1,9 +1,15 @@
 version: '3.7'
 services:
-  minecraft:
-    image: itzg/minecraft-server
+  bungeecord:
+    image: itzg/bungeecord
+    environment:
+      BUNGEE_JAR_REVISION: "1"
     ports:
-      - "25565:25565"
+      - 25565:25577
+    volumes:
+      - ./bungeecord/server:/server
+  mc-creative:
+    image: itzg/minecraft-server
     environment:
       EULA: "TRUE"
     deploy:
@@ -11,4 +17,14 @@ services:
         limits:
           memory: 1.5G
     volumes:
-      - ./data:/data
+      - ./mc-creative/data:/data
+  mc-survival:
+    image: itzg/minecraft-server
+    environment:
+      EULA: "TRUE"
+    deploy:
+      resources:
+        limits:
+          memory: 1.5G
+    volumes:
+      - ./mc-survival/data:/data

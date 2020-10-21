@@ -1,8 +1,16 @@
-/data/*
+# Exclude generated minecraft server stuff,
+# include hand crafted server configuration
+/*/data/*
 
-!/data/banned-ips.json
-!/data/banned-players.json
-!/data/log4j2.xml
-!/data/osp.json
-!/data/server.properties
-!/data/whitelist.json
+!/*/data/banned-ips.json
+!/*/data/banned-players.json
+!/*/data/log4j2.xml
+!/*/data/osp.json
+!/*/data/server.properties
+!/*/data/whitelist.json
+
+# Exclude generated BungeeCord server stuff
+# include hand crafted server configuration
+/bungeecord/server/*
+
+!/bungeecord/server/config.yml

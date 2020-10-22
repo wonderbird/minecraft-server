@@ -1,0 +1,60 @@
+server_connect_timeout: 5000
+listeners:
+- query_port: 25577
+  motd: '&1My own BungeeCord Server'
+  tab_list: GLOBAL_PING
+  query_enabled: false
+  proxy_protocol: false
+  ping_passthrough: false
+  priorities:
+  - lobby
+  - creative
+  - survival
+  bind_local_address: true
+  host: 0.0.0.0:25577
+  max_players: 1
+  tab_size: 60
+  force_default_server: true
+  forced_hosts:
+    pvp.md-5.net: pvp
+remote_ping_cache: -1
+network_compression_threshold: 256
+permissions:
+  default:
+  - bungeecord.command.server
+  - bungeecord.command.list
+  admin:
+  - bungeecord.command.alert
+  - bungeecord.command.end
+  - bungeecord.command.ip
+  - bungeecord.command.reload
+log_pings: true
+connection_throttle_limit: 3
+prevent_proxy_connections: false
+timeout: 30000
+player_limit: -1
+ip_forward: false
+groups:
+  Monstrox12:
+  - admin
+remote_ping_timeout: 5000
+connection_throttle: 4000
+log_commands: false
+stats: e03e63cd-8f89-4712-be09-388c00b455d3
+online_mode: true
+forge_support: true
+disabled_commands:
+- disabledcommandhere
+servers:
+  lobby:
+    motd: '&1Welcome to the Lobby'
+    address: mc-lobby:25565
+    restricted: false
+  creative:
+    motd: '&1The creative world'
+    address: mc-creative:25565
+    restricted: false
+  survival:
+    motd: '&1Try to survive'
+    address: mc-survival:25565
+    restricted: false

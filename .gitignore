@@ -11,6 +11,6 @@
 
 # Exclude generated BungeeCord server stuff
 # include hand crafted server configuration
-/bungeecord/server/*
+/bungeecord/*
 
-!/bungeecord/server/config.yml
+!/bungeecord/config.yml

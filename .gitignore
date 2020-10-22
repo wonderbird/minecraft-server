@@ -1,18 +1,26 @@
 # Exclude generated minecraft server stuff,
 # include hand crafted server configuration
-/mc-lobby/*
-/mc-creative/*
-/mc-survival/*
-
-!/*/banned-ips.json
-!/*/banned-players.json
-!/*/log4j2.xml
-!/*/osp.json
-!/*/server.properties
-!/*/whitelist.json
-
-# Exclude generated BungeeCord server stuff
-# include hand crafted server configuration
+/mc-*/*
 /bungeecord/*
+PluginMetrics/
 
-!/bungeecord/config.yml
+/mc-*/plugins/*
+!/mc-*/plugins
+!/mc-*/plugins/*.jar
+
+/mc-*/plugins/WorldGuard/*
+!WorldGuard
+
+!AdvancedPortals
+
+!banned-ips.json
+!banned-players.json
+!bukkit.yml
+!log4j2.xml
+!ops.json
+!server.properties
+!spigot.yml
+!whitelist.json
+!config.yml
+
+.DS_Store

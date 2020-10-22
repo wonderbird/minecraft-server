@@ -13,6 +13,7 @@ services:
     image: itzg/minecraft-server
     environment:
       EULA: "TRUE"
+      TYPE: "SPIGOT"
     restart: on-failure
     deploy:
       resources:
@@ -24,6 +25,7 @@ services:
     image: itzg/minecraft-server
     environment:
       EULA: "TRUE"
+      TYPE: "SPIGOT"
     restart: on-failure
     deploy:
       resources:
@@ -35,6 +37,7 @@ services:
     image: itzg/minecraft-server
     environment:
       EULA: "TRUE"
+      TYPE: "SPIGOT"
     restart: on-failure
     deploy:
       resources:

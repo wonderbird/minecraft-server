@@ -1,13 +1,15 @@
 # Exclude generated minecraft server stuff,
 # include hand crafted server configuration
-/*/data/*
+/mc-lobby/*
+/mc-creative/*
+/mc-survival/*
 
-!/*/data/banned-ips.json
-!/*/data/banned-players.json
-!/*/data/log4j2.xml
-!/*/data/osp.json
-!/*/data/server.properties
-!/*/data/whitelist.json
+!/*/banned-ips.json
+!/*/banned-players.json
+!/*/log4j2.xml
+!/*/osp.json
+!/*/server.properties
+!/*/whitelist.json
 
 # Exclude generated BungeeCord server stuff
 # include hand crafted server configuration

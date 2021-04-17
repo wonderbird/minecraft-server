@@ -1,0 +1,47 @@
+version: '3.7'
+services:
+  bungeecord:
+    image: itzg/bungeecord
+    environment:
+      BUNGEE_JAR_REVISION: "1"
+    ports:
+      - 25565:25577
+    restart: on-failure
+    volumes:
+      - ./bungeecord:/server
+  mc-lobby:
+    image: itzg/minecraft-server
+    environment:
+      EULA: "TRUE"
+      TYPE: "SPIGOT"
+    restart: on-failure
+    deploy:
+      resources:
+        limits:
+          memory: 1.5G
+    volumes:
+      - ./mc-lobby:/data
+  mc-creative:
+    image: itzg/minecraft-server
+    environment:
+      EULA: "TRUE"
+      TYPE: "SPIGOT"
+    restart: on-failure
+    deploy:
+      resources:
+        limits:
+          memory: 1.5G
+    volumes:
+      - ./mc-creative:/data
+  mc-survival:
+    image: itzg/minecraft-server
+    environment:
+      EULA: "TRUE"
+      TYPE: "SPIGOT"
+    restart: on-failure
+    deploy:
+      resources:
+        limits:
+          memory: 1.5G
+    volumes:
+      - ./mc-survival:/data

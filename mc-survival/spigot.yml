@@ -33,7 +33,7 @@ settings:
   moved-too-quickly-multiplier: 10.0
   log-villager-deaths: true
   netty-threads: 4
-  bungeecord: true
+  bungeecord: false
   debug: false
   attribute:
     maxHealth:

@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  mc-survival:
+    image: itzg/minecraft-server
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "SPIGOT"
+    restart: on-failure
+    deploy:
+      resources:
+        limits:
+          memory: 1.5G
+    volumes:
+      - ./mc-survival:/data

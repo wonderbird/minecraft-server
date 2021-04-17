@@ -14,3 +14,19 @@ services:
           memory: 1.5G
     volumes:
       - ./mc-survival:/data
+  geyser:
+    image: bmoorman/geyser:latest
+    ports:
+      - "19132:19132/udp"
+    environment:
+      TZ: "Europe/Berlin"
+      GEYSER_MIN_MEM: "1024m"
+      GEYSER_MAX_MEM: "1434m"
+    container_name: geyser
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 1.5G
+    volumes:
+      - ./mc-geyser:/var/lib/geyser

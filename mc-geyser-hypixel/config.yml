@@ -19,8 +19,8 @@ bedrock:
   clone-remote-port: false
   # The MOTD that will be broadcasted to Minecraft: Bedrock Edition clients. This is irrelevant if "passthrough-motd" is set to true
   # If either of these are empty, the respective string will default to "Geyser"
-  motd1: "Geyser -> 24sucht"
-  motd2: "Unsere Weiterleitung an 24sucht"
+  motd1: "Geyser -> HyPixel.net"
+  motd2: "Unsere Weiterleitung an HyPixel.net"
   # The Server Name that will be sent to Minecraft: Bedrock Edition clients. This is visible in both the pause menu and the settings menu.
   server-name: "Geyser"
   # Whether to enable PROXY protocol or not for clients. You DO NOT WANT this feature unless you run UDP reverse proxy
@@ -35,7 +35,7 @@ remote:
   # The IP address of the remote (Java Edition) server
   # If it is "auto", for standalone version the remote address will be set to 127.0.0.1,
   # for plugin versions, Geyser will attempt to find the best address to connect to.
-  address: 24sucht.net
+  address: mc.hypixel.net
   # The port of the remote (Java Edition) server
   # For plugin versions, if address has been set to "auto", the port will also follow the server's listening port.
   port: 25565
